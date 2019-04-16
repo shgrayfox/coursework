@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{FAA4DDFF-69EC-4A47-AF3A-2A0981F0979F}</ProjectGuid>
+    <ProjectGuid>{EF4512EF-563D-4BB0-95AA-07CFC65B71A8}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>TPcourse</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
@@ -146,17 +146,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Main.cpp" />
-    <ClCompile Include="STATE.cpp" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="Atlant.h" />
     <ClInclude Include="Country.h" />
     <ClInclude Include="MidEr.h" />
     <ClInclude Include="Narnia.h" />
     <ClInclude Include="OZ.h" />
-    <ClInclude Include="STATE.h" />
     <ClInclude Include="Vest.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
