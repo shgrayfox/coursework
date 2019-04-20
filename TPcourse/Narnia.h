@@ -30,21 +30,21 @@ public:
 		else file << "Магия:\t\t\t\tне используется" << magic << endl;
 		file << "Расы: \t\t\t\t" << races << endl;
 		file << "Мифические существа: \t\t" << creatures << endl << endl << endl;
+		file.close();
 	};
 	void create() {
 		cntryname = "Нарния";
-		num_states = 2;
-		statename[0] = "Нарния";
-		statename[1] = "Нарния";
-		flag[0] = "-";
-		capital[0] = "-";
-		statehead[0] = "Каспиан";
-		mention = "серия книг Нарния";
-		climate = "Климат";
+		num_states = 4;
+		statename[0] = "Нарния"; statename[1] = "Орландия"; statename[2] = "Тархистан"; statename[3] = "Тельмаринское королевство";
+		flag[0] = "Алый лев"; flag[1] = "крест"; flag[2] = "-"; flag[3] = "хищная птица";
+		capital[0] = "Кэр-Параваль"; capital[1] = "Анвард"; capital[2] = "Ташбаан"; capital[3] = "Тельмар";
+		statehead[0] = "Сьюзен, Люси, Эдмунд, Питер"; statehead[1] = "Лун, Кор";	statehead[2] = "Тисрок, Рабадаш"; statehead[3] = "Каспиан";
+		mention = "серия книг Клайва С. Льюиса: Хроники Нарнии";
+		climate = "равнинный, горный, благоприятный";
 		magic = 1;
-		races = "люди";
-		creatures = "говорящие животные, фавны, гномы";
-		file.close();
+		races = "люди, говорящие животные, фавны, гномы, колдуньи, великаны, дриады, пегасы, сатиры, наяды";
+		creatures = "говорящие животные, фавны, гномы, колдуньи, великаны, дриады, пегасы, сатиры, наяды";
+		
 	};
 	void FreeInst() { refcount--; if (!refcount) { delete this; self = NULL; } }
 };

@@ -19,15 +19,15 @@ public:
 	void create() {
 		cntryname = "Атлантида";
 		num_states = 1;
-		statename[0] = "-";
-		flag[0] = "-";
-		capital[0] = "-";
-		statehead[0] = "-";
-		mention = "Мифы";
+		statename[0] = "Атлантида";
+		flag[0] = "черный кракен";
+		capital[0] = "Атлантида";
+		statehead[0] = "Атлант, Рама";
+		mention = "Мифы Древней Греции, роман Двадцать тысяч лье под водой, Д.Колосов Атланты и др.";
 		climate = "влажный";
-		magic = 1;
-		races = "люди";
-		creatures = "-";
+		magic = 0;
+		races = "атланты";
+		creatures = "атланты";
 	};
 	void out() {
 		file.open("Atlant.txt");
