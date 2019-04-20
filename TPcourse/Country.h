@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include <string>
+#include <fstream>
 using namespace std;
 
 class COUNTRY {
@@ -18,17 +19,7 @@ protected:
 	string races = "-";
 	string creatures = "-";
 public:
-	virtual void out() {
-		cout << "Название страны: \t\t" << cntryname << endl << endl;
-		cout << "Количество государств: \t\t" << num_states << endl;
-		for (int i = 0; i < num_states; ++i)
-			cout << i + 1 << "\tНазвание: " << statename[i] << " \tФлаг: " << flag[i] << " \tСтолица: " << capital[i] << " \tГлава государства: " << statehead[i] << endl;
-		cout << "Упоминания в книгах и фильмах: \t" << mention << endl;
-		cout << "Климат: \t\t\t" << climate << endl;
-		cout << "Магия: \t\t\t\t" << magic << endl;
-		cout << "Расы: \t\t\t\t" << races << endl;
-		cout << "Мифические существа: \t\t" << creatures << endl << endl << endl;
-	};
+	virtual void out() {};
 	virtual void create() {};
 	virtual void FreeInst() { delete this; }
 };
