@@ -31,18 +31,21 @@ public:
 	};
 	void out() {
 		file.open("Atlant.txt");
-		file << "Название страны: \t" << cntryname << endl << endl;
-		file << "Количество государств: \t" << num_states << endl;
-		file << "#: " << "\tНазвание:" << "\tФлаг:" << "\tСтолица:" << "\tГлава государства:"  << endl;
-		for (int i = 0; i < num_states; ++i)
-			file << i + 1 << "\t" << statename[i] << "\t" << flag[i] << "\t" << capital[i] << "\t" << statehead[i] << endl;
+		file << "Название страны: " << cntryname << endl;
+		file << "Количество государств: " << num_states << endl;
+		for (int i = 0; i < num_states; ++i) {
+			file << i + 1 << "\tНазвание:\t" << statename[i] << endl;
+			file << "\tФлаг:\t\t" << flag[i] << endl;
+			file << "\tСтолица:\t" << capital[i] << endl;
+			file << "\tГлава государства: " << statehead[i] << endl;
+		}
 		file << "Упоминания в книгах и фильмах: " << mention << endl;
-		file << "Климат: \t\t" << climate << endl;
+		file << "Климат: " << climate << endl;
 		if (magic == 1)
-			file << "Магия:\t\t\t\tиспользуется" << magic << endl;
-		else file << "Магия:\t\t\t\tне используется" << magic << endl;
-		file << "Расы: \t\t\t" << races << endl;
-		file << "Мифические существа: \t\t" << creatures << endl << endl << endl;
+			file << "Магия: используется" << endl;
+		else file << "Магия: не используется" << endl;
+		file << "Расы: " << races << endl;
+		file << "Мифические существа: " << creatures << endl << endl << endl;
 		file.close();
 	};
 	void FreeInst() { refcount--; if (!refcount) { delete this; self = NULL; } }
