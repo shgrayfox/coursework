@@ -6,7 +6,7 @@ class OZ : public COUNTRY {
 	static OZ* self;
 	static int refcount;
 protected:
-	OZ() {}
+	OZ() { printf("Singleton::Singleton \n"); }
 	~OZ() { printf("Singleton::~Singleton \n"); }
 public:
 	ofstream file;
@@ -44,8 +44,8 @@ public:
 		mention = "серии книг Лаймена Ф. Бауна: Удивительный волшебник из страны Оз, А.М. Волкова: Волшебник Изумрудного города";
 		climate = "равнинный, горный, теплый, вечное лето";
 		magic = 1;
-		races = "волшебницы, люди, летучие обезьяны, мигуны, жевуны, болтуны, прыгуны, гномы";
-		creatures = "ведьмы, люди, летучие обезьяны, мигуны, жевуны, болтуны, прыгуны, гномы";
+		races = "волшебницы, люди, мигуны, жевуны, болтуны, прыгуны, гномы";
+		creatures = "волшебницы, летучие обезьяны, мигуны, жевуны, болтуны, прыгуны, гномы";
 	};
 	void FreeInst() { refcount--; if (!refcount) { delete this; self = NULL; } }
 };

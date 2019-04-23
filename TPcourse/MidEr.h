@@ -7,7 +7,7 @@ class MiddleEarth : public COUNTRY {
 	static int refcount;
 protected:
 	ofstream file;
-	MiddleEarth() {}
+	MiddleEarth() { printf("Singleton::Singleton \n"); }
 	~MiddleEarth() { printf("Singleton::~Singleton \n"); }
 public:
 	static MiddleEarth* Instance() {

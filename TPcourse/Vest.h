@@ -6,7 +6,7 @@ class Vesteros : public COUNTRY {
 	static Vesteros* self;
 	static int refcount;
 protected:
-	Vesteros() {}
+	Vesteros() { printf("Singleton::Singleton \n"); }
 	~Vesteros() { printf("Singleton::~Singleton \n"); }
 public:
 	ofstream file;

@@ -7,7 +7,7 @@ class Atlant : public COUNTRY {
 	static int refcount;
 protected:
 	ofstream file;
-	Atlant() {}
+	Atlant() { printf("Singleton::Singleton \n"); }
 	~Atlant() { printf("Singleton::~Singleton \n"); }
 public:
 	static Atlant* Instance() {

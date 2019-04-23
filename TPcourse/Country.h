@@ -29,12 +29,13 @@ class CTRY {
 	int ind;
 public:
 	CTRY() { cntr[0] = NULL; cntr[1] = NULL; cntr[2] = NULL; cntr[3] = NULL; cntr[4] = NULL; ind = 0; }
-	~CTRY() { 
-		for (int i = 0; i<ind; i++) 
-			cntr[i]->FreeInst(); 
-	}
+	~CTRY() { for (int i = 0; i<ind; i++) cntr[i]->FreeInst(); }
 	void Add(COUNTRY *p) { if (ind<5) cntr[ind++] = p; }
 	void Do() {
-		for (int i = 0; i < ind; i++) { cntr[i]->create(); cntr[i]->out();};
+		for (int i = 0; i < ind; i++) {
+			cntr[i]->create();
+			cntr[i]->out();
+			printf("Запись в файл завершена\n");
+		};
 	}
 };

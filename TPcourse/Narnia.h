@@ -7,7 +7,7 @@ class Narnia : public COUNTRY {
 	static int refcount;
 protected:
 	ofstream file;
-	Narnia() {}
+	Narnia() { printf("Singleton::Singleton \n"); }
 	~Narnia() { printf("Singleton::~Singleton \n"); }
 public:
 	static Narnia* Instance() {
